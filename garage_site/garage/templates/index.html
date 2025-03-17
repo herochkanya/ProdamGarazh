@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Продам Гараж</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <script src="{% static 'script.js' %}" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="#">Головна</a></li>
+                <li><a href="#">Про гараж</a></li>
+                <li><a href="#">Контакти</a></li>
+            </ul>
+        </nav>
+        <h1>Продам Гараж</h1>
+    </header>
+    
+    <main>
+        <section class="description">
+            <p>
+                🔥 <b>Файний гараж продається!</b> Чищений, трохи підгорівший, але то таке. <br>  
+                🎁 <b>Бонуси:</b> свиня, дві затуплені електронні бритви та трон, де мирно хропе Шемедюк. <br>
+                💰 <b>Ціна:</b> три пєтуха і одна заточена бритва. <br>
+                📍 <b>Локація:</b> озеро з розовим ділдо на дні. <br>
+                ⚠️ <b>Поспішай!</b> Бо встигнеш лише облизня зловити!
+            </p>
+        </section>
+
+        <section class="slider">
+            <div class="slider-container">
+                <button class="prev">&#10094;</button>
+                <div class="slides">
+                    {% for image in images %}
+                        <img src="{% static 'images/' %}{{ image }}" class="slide" alt="Гараж">
+                    {% endfor %}
+                    {% for video in videos %}
+                        <video class="slide" controls>
+                            <source src="{% static 'videos/' %}{{ video }}" type="video/mp4">
+                            Ваш браузер не підтримує відео.
+                        </video>
+                    {% endfor %}
+                </div>
+                <button class="next">&#10095;</button>
+            </div>
+        </section>
+    </main>
+
+    <button id="scrollTopBtn">&#8679;</button>
+
+    <footer>
+        <div class="contacts">
+            <a href="https://t.me/a_spectator_from_the_darkness" target="_blank">
+                <img src="{% static 'icons/tg.jpg' %}" alt="Telegram">
+            </a>
+            <a href="viber://chat?number=+380964208430">
+                <img src="{% static 'icons/vb.jpg' %}" alt="Viber">
+            </a>
+            <a href="tel:+380964208430">📞 +380 96 420 84 30</a>
+            <a href="mailto:herofthisworld@gmail.com">✉️ herofthisworld@gmail.com</a>
+        </div>
+        <p>© 2025 Продам Гараж. Всі права захищені.</p>
+    </footer>
+</body>
+</html>
