@@ -126,6 +126,8 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",  # Якщо статика знаходиться в каталозі `static` поруч з файлом settings.py
 ]
 
+STATIC_ROOT = 'staticfiles'  # Місце для збору статичних файлів
+
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
