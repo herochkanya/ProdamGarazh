@@ -5,11 +5,7 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    text-decoration: none;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    --GRAY: #3a3a3a
+    --GRAY: #3a3a3a;
 }
 
 .highlight {
@@ -24,6 +20,9 @@ body {
 .nav-bar ul {
     list-style: none;
     background: var(--GRAY);
+    display: flex;
+    justify-content: center;
+    padding: 0;
 }
 
 .nav-bar li {
@@ -35,10 +34,18 @@ body {
     padding: 15px;
     display: block;
     transition: color 0.3s ease;
+    text-decoration: none;
 }
 
 .nav-bar a:hover {
     color: white;
+}
+
+main p {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 800px;
+    text-decoration: none;
 }
 
 /* Кнопка "Вгору" */
@@ -56,6 +63,8 @@ body {
     cursor: pointer;
     display: none;
     transition: background 0.3s ease;
+    text-align: center;
+    justify-content: center;
 }
 
 #scrollTopBtn:hover {
@@ -119,16 +128,24 @@ img, video {
 footer {
     background: #2a2a2a;
     padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+    text-decoration: none;
+    justify-content: center;
 }
 
 .contacts {
     gap: 15px;
     margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .contacts a {
     color: white;
     font-size: 18px;
+    text-decoration: none;
 }
 
 .contacts img {
@@ -136,6 +153,9 @@ footer {
     height: 30px;
 }
 
+footer p {
+    color: #777;
+}
 footer p {
     color: #777;
 }
